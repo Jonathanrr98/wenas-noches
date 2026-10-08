@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Wenas Noches: fotografía de retrato, moda, cosplay, parejas y danza en Montevideo. Ofertas de lanzamiento.">
+<meta property="og:title" content="Wenas Noches · Fotografía">
+<meta property="og:description" content="Retrato, moda, cosplay, parejas y danza. Ofertas de lanzamiento.">
+<meta property="og:image" content="img/s/IMG_5675.webp">
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Wenas Noches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a night-time contact sheet — wordmark + three "prints" up top, then a masonry wall of frames that open full-screen. Single dark look on purpose (es de noche). */
+:root{
+  --night:#0e121a;        /* fondo: azul tinta */
+  --night-2:#161b26;      /* superficies */
+  --line:#272e3c;         /* bordes finos */
+  --paper:#eee8dc;        /* texto: papel fotográfico */
+  --dim:#8f96a6;          /* texto secundario */
+  --sodium:#eaa547;       /* acento: luz de farol */
+  --f-display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --f-body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --gutter:clamp(16px,4vw,48px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--night);color:var(--paper);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sodium);outline-offset:3px}
+.wrap{max-width:1440px;margin-inline:auto;padding-inline:var(--gutter)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--night) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-style:italic;font-size:1.3rem;letter-spacing:.01em;white-space:nowrap}
+.moon{width:16px;height:16px;border-radius:50%;box-shadow:inset -5px 1px 0 0 var(--sodium);flex:none}
+.top nav{display:flex;gap:clamp(12px,2.5vw,28px);font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
+.top nav a{text-decoration:none;color:var(--dim)}
+.top nav a:hover{color:var(--paper)}
+@media (max-width:520px){.top nav .hide-sm{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:center;padding-block:clamp(40px,7vw,96px) clamp(40px,6vw,80px)}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;color:var(--dim);letter-spacing:.06em;margin:0 0 20px}
+.eyebrow b{color:var(--sodium);font-weight:500}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(3.6rem,10.5vw,9.5rem);line-height:.86;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 i{display:block;padding-left:.55em;color:var(--sodium)}
+.lede{max-width:34ch;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--paper);opacity:.86;margin:28px 0 32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-size:.9rem;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:background .2s,border-color .2s,color .2s}
+.btn.solid{background:var(--sodium);border-color:var(--sodium);color:var(--night)}
+.btn.solid:hover{background:var(--paper);border-color:var(--paper)}
+.btn.ghost:hover{border-color:var(--paper)}
+
+.prints{position:relative;aspect-ratio:1/1.06;max-width:100%}
+.print{position:absolute;margin:0;background:var(--night-2);padding:8px 8px 28px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.print img{display:block;width:100%;height:100%;object-fit:cover}
+.print figcaption{position:absolute;left:10px;bottom:7px;font-family:var(--f-mono);font-size:.68rem;color:var(--dim)}
+.print.p1{width:56%;height:78%;left:22%;top:4%;z-index:2}
+.print.p2{width:38%;height:52%;left:0;top:40%;transform:rotate(-4deg)}
+.print.p3{width:38%;height:52%;right:0;top:0;transform:rotate(3.5deg)}
+.prints:hover .p2{transform:rotate(-7deg) translateX(-10px)}
+.prints:hover .p3{transform:rotate(6deg) translateX(10px)}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.prints{max-width:520px;width:100%;margin-inline:auto}}
+
+/* gallery */
+.section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:28px;margin-bottom:28px}
+h2{font-family:var(--f-display);font-weight:400;font-style:italic;font-size:clamp(2rem,4.5vw,3.4rem);line-height:1;margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.86rem;color:var(--dim);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;display:inline-flex;gap:8px;align-items:baseline;transition:color .2s,border-color .2s,background .2s}
+.chip span{font-family:var(--f-mono);font-size:.72rem;font-variant-numeric:tabular-nums;opacity:.7}
+.chip:hover{color:var(--paper);border-color:var(--dim)}
+.chip[aria-pressed="true"]{color:var(--night);background:var(--paper);border-color:var(--paper)}
+
+.wall{columns:4 260px;column-gap:14px}
+.frame{break-inside:avoid;margin:0 0 14px;position:relative;cursor:zoom-in;background:var(--night-2);overflow:hidden}
+.frame button{all:unset;display:block;cursor:zoom-in;width:100%}
+.frame img{display:block;width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s}
+.frame figcaption{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;gap:8px;padding:28px 12px 10px;font-family:var(--f-mono);font-size:.7rem;color:var(--paper);background:linear-gradient(transparent,rgba(8,10,15,.78));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.frame:hover img,.frame:focus-within img{transform:scale(1.03)}
+.frame:hover figcaption,.frame:focus-within figcaption{opacity:1;transform:none}
+.frame figcaption em{font-style:normal;color:var(--sodium)}
+@media (hover:none){.frame figcaption{opacity:1;transform:none;padding-top:20px}}
+@media (max-width:560px){.wall{columns:2;column-gap:8px}.frame{margin-bottom:8px}.frame figcaption{font-size:.62rem;padding:16px 8px 6px}}
+
+/* propuestas */
+.offers-head{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,112px);padding-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin-bottom:32px}
+.offers-head p{max-width:44ch;color:var(--dim);margin:0}
+.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.offer{display:grid;grid-template-rows:auto 1fr;background:var(--night-2);border:1px solid var(--line);min-width:0;transition:border-color .25s}
+.offer:hover{border-color:var(--dim)}
+.offer.star{border-color:var(--sodium)}
+.offer-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.offer-img img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.tag{position:absolute;top:12px;left:12px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:var(--sodium);color:var(--night);padding:4px 8px}
+.offer-body{display:flex;flex-direction:column;gap:14px;padding:22px 22px 24px}
+.offer h3{font-family:var(--f-display);font-weight:400;font-size:1.7rem;line-height:1.05;margin:0}
+.offer .for{color:var(--dim);font-size:.94rem;margin:0}
+.offer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:.93rem}
+.offer li{display:grid;grid-template-columns:14px 1fr;gap:10px}
+.offer li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sodium);margin-top:.6em}
+.offer-foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px dashed var(--line)}
+.price{font-family:var(--f-mono);font-size:.82rem;color:var(--paper)}
+.price .amount{font-family:var(--f-display);font-size:1.75rem;line-height:1;font-variant-numeric:lining-nums tabular-nums;color:var(--sodium)}
+.promo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;border:1px dashed var(--sodium);padding:14px 18px;margin-bottom:16px;font-size:.95rem}
+.promo b{color:var(--sodium);font-weight:600}
+.promo-note{font-family:var(--f-mono);font-size:.72rem;color:var(--dim)}
+.price small{display:block;color:var(--dim);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+.offer-actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn.sm{padding:8px 14px;font-size:.8rem}
+.btn.link{background:none;border:none;color:var(--dim);font:inherit;font-size:.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:8px 4px}
+.btn.link:hover{color:var(--paper)}
+.extras{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.88rem;color:var(--dim);padding:16px 0;border-bottom:1px solid var(--line)}
+.extras b{color:var(--paper);font-weight:600}
+
+/* about / contact */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);margin-top:clamp(40px,6vw,72px);padding-block:clamp(40px,6vw,80px)}
+.about p{max-width:46ch;color:var(--paper);opacity:.86;margin:18px 0 0}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:28px 0 0;font-size:.92rem}
+.specs dt{font-family:var(--f-mono);font-size:.74rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+.specs dd{margin:0}
+.contact{background:var(--night-2);border:1px solid var(--line);padding:clamp(24px,4vw,44px);align-self:start}
+.contact h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.05;margin:0 0 14px;text-wrap:balance}
+.contact h3 i{color:var(--sodium)}
+.handle{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px}
+.handle code{font-family:var(--f-mono);font-size:1rem;user-select:all;padding:8px 12px;border:1px dashed var(--line)}
+.copy{font:inherit;font-size:.82rem;color:var(--dim);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.copy:hover{color:var(--paper)}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:24px;font-family:var(--f-mono);font-size:.72rem;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(7,9,13,.96);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 14px)}
+.lb[hidden]{display:none}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.78rem;color:var(--dim);font-variant-numeric:tabular-nums}
+.lb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6);opacity:1;transition:opacity .25s}
+.lb-stage img.loading{opacity:.25}
+.lb-cap{text-align:center;font-family:var(--f-mono);font-size:.76rem;color:var(--dim);padding-top:12px}
+.lb-cap em{font-style:normal;color:var(--sodium)}
+.ib{font:inherit;color:var(--paper);background:transparent;border:1px solid var(--line);width:44px;height:44px;border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:1.1rem;line-height:1}
+.ib:hover{border-color:var(--paper)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(14,18,26,.6)}
+.lb-prev{left:0}.lb-next{right:0}
+@media (max-width:560px){.lb-prev,.lb-next{display:none}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inicio"><span class="moon" aria-hidden="true"></span>Wenas Noches</a>
+    <nav aria-label="Secciones">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#sobre" class="hide-sm">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="inicio">
+  <section class="hero">
+    <div>
+      <p class="eyebrow"><b>@wenas_nochesj</b> &nbsp;/&nbsp; fotografía de retrato</p>
+      <h1>Wenas <i>Noches</i></h1>
+      <p class="lede">Retrato, moda, cosplay, parejas y danza. Gente real, luz de calle y colores con carácter.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#trabajo">Ver el trabajo</a>
+        <a class="btn ghost" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+    <div class="prints" aria-hidden="true">
+      <figure class="print p2"><img src="img/s/IMG_2580.webp" alt=""><figcaption>IMG_2580</figcaption></figure>
+      <figure class="print p3"><img src="img/s/IMG_1466.webp" alt=""><figcaption>IMG_1466</figcaption></figure>
+      <figure class="print p1"><img src="img/s/IMG_5675.webp" alt=""><figcaption>IMG_5675</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="trabajo">
+    <div class="section-head">
+      <h2>Trabajo</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por tipo"></div>
+    </div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <section id="ofertas">
+    <div class="offers-head">
+      <h2>Ofertas</h2>
+      <p>Precios de lanzamiento para las primeras sesiones. Si tenés otra idea, contámela y armamos algo a medida.</p>
+    </div>
+    <div class="promo">
+      <span><b>Traé a alguien:</b> si reservás con un amigo o amiga, los dos tienen 20% de descuento.</span>
+      <span class="promo-note">Precios válidos hasta el 31 de diciembre de 2026.</span>
+    </div>
+    <div class="offers">
+      <article class="offer star">
+        <div class="offer-img"><img src="img/s/IMG_6249.webp" alt="Ejemplo de sesión: mini sesión" loading="lazy"><span class="tag">Para probar</span></div>
+        <div class="offer-body">
+          <h3>Mini sesión</h3>
+          <p class="for">Para probar sin compromiso, o tener una foto nueva de perfil en poco tiempo.</p>
+          <ul><li>20 minutos</li><li>1 locación</li><li>5 fotos editadas</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 1.500</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="retrato">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="offer-img"><img src="img/s/IMG_7618.webp" alt="Ejemplo de sesión: retrato" loading="lazy"></div>
+        <div class="offer-body">
+          <h3>Retrato</h3>
+          <p class="for">Fotos tuyas para redes, para regalar o porque tenés ganas.</p>
+          <ul><li>1 hora de sesión</li><li>1 locación a elección</li><li>1 cambio de ropa</li><li>15 fotos editadas</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 2.900</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="retrato">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="offer-img"><img src="img/s/IMG_1466.webp" alt="Ejemplo de sesión: cosplay" loading="lazy"></div>
+        <div class="offer-body">
+          <h3>Cosplay</h3>
+          <p class="for">Tu personaje con un fondo que le quede: puertas viejas, parques, arquitectura.</p>
+          <ul><li>1 h 30 min de sesión</li><li>Locación elegida según el personaje</li><li>20 fotos editadas</li><li>2 fotos con edición especial</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 3.500</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="cosplay">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="offer-img"><img src="img/s/IMG_2153.webp" alt="Ejemplo de sesión: parejas" loading="lazy"></div>
+        <div class="offer-body">
+          <h3>Parejas</h3>
+          <p class="for">Sesión de pareja, compromiso o pre-boda, con poses guiadas y naturales.</p>
+          <ul><li>2 horas de sesión</li><li>Hasta 2 locaciones</li><li>30 fotos editadas</li><li>Galería online para descargar</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 4.900</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="parejas">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="offer-img"><img src="img/s/IMG_3154.webp" alt="Ejemplo de sesión: moda y book" loading="lazy"></div>
+        <div class="offer-body">
+          <h3>Moda y book</h3>
+          <p class="for">Para modelos, marcas y emprendimientos que necesitan fotos de su ropa o producto.</p>
+          <ul><li>2 horas de sesión</li><li>Hasta 3 cambios de ropa</li><li>25 fotos editadas</li><li>Formatos para el feed y las historias</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 4.900</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="moda">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="offer-img"><img src="img/s/IMG_2332.webp" alt="Ejemplo de sesión: danza y artistas" loading="lazy"></div>
+        <div class="offer-body">
+          <h3>Danza y artistas</h3>
+          <p class="for">Bailarines, músicos y artistas: movimiento, instrumento y escenario urbano.</p>
+          <ul><li>1 h 30 min de sesión</li><li>Fotos en movimiento y retrato</li><li>20 fotos editadas</li><li>Selección para portfolio o afiche</li></ul>
+          <div class="offer-foot">
+            <div class="price"><small>Precio lanzamiento</small><span class="amount">$U 3.500</span></div>
+            <div class="offer-actions">
+              <button class="btn link" type="button" data-see="danza">Ver ejemplos</button>
+              <a class="btn solid sm" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Reservar ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="extras">
+      <span><b>Extras</b></span>
+      <span>Foto editada adicional · $U 150</span>
+      <span>Locación extra · $U 800</span>
+      <span>Entrega en 72 h · $U 600</span>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div>
+      <h2>Sobre mí</h2>
+      <p>Soy Jonathan, y detrás de @wenas_nochesj hago retratos en la calle, en parques y en edificios viejos: sesiones individuales, cosplay, parejas y danza.</p>
+      <dl class="specs">
+        <dt>Desde</dt><dd>2021</dd>
+        <dt>Estilos</dt><dd>Retrato · Moda · Cosplay · Parejas · Danza</dd>
+      </dl>
+    </div>
+    <div class="contact" id="contacto">
+      <h3>¿Hacemos una <i>sesión</i>?</h3>
+      <p style="margin:0;opacity:.86">Escribime por mensaje directo en Instagram y coordinamos lugar, idea y fecha.</p>
+      <div class="handle">
+        <code id="handle">@wenas_nochesj</code>
+        <button class="copy" id="copy" type="button">Copiar</button>
+      </div>
+      <div class="ctas" style="margin-top:22px">
+        <a class="btn solid" href="https://www.instagram.com/wenas_nochesj/" target="_blank" rel="noopener">Abrir Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© Wenas Noches</span>
+    <span id="count"></span>
+  </footer>
+</main>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <div class="lb-bar">
+    <span id="lb-n"></span>
+    <button class="ib" id="lb-close" type="button" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="lb-stage" id="lb-stage">
+    <button class="ib lb-prev" id="lb-prev" type="button" aria-label="Anterior">←</button>
+    <img id="lb-img" alt="">
+    <button class="ib lb-next" id="lb-next" type="button" aria-label="Siguiente">→</button>
+  </div>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+<script>
+const CATS={retrato:"Retrato",moda:"Moda",cosplay:"Cosplay",parejas:"Parejas",danza:"Danza y música"};
+// [archivo, categoría, ancho, alto, año, cámara]
+const P=[
+["IMG_2987","moda",720,975,"2021","1100D"],["IMG_1466","cosplay",720,1080,"2023","60D"],["IMG_7618","retrato",720,971,"2022","1100D"],
+["IMG_2332","danza",720,1065,"2021","1100D"],["IMG_2153","parejas",720,1052,"2023","60D"],["IMG_3154","moda",720,975,"2022","1100D"],
+["IMG_2162","retrato",720,1056,"2021","1100D"],["IMG_3778","cosplay",720,1080,"2024","60D"],["IMG_7425","retrato",720,1005,null,null],
+["IMG_2884","moda",720,1080,"2023","60D"],["IMG_1508","cosplay",720,1080,"2023","60D"],["IMG_0222","retrato",720,1080,null,null],
+["IMG_2580","danza",708,1100,"2021","1100D"],["IMG_7479","retrato",720,1080,"2022","1100D"],["IMG_2883","cosplay",720,1073,"2023","60D"],
+["IMG_2160","parejas",720,1080,"2023","60D"],["IMG_3162","moda",689,1100,"2022","1100D"],["IMG_9275","retrato",720,950,"2021","1100D"],
+["IMG_2052","cosplay",720,952,"2023","60D"],["IMG_4290","moda",720,1080,null,null],["IMG_7642","retrato",720,1017,"2022","1100D"],
+["IMG_2786","cosplay",720,1080,"2023","60D"],["IMG_0237","retrato",720,1016,null,null],["IMG_2870","moda",720,1058,"2023","60D"],
+["IMG_1991","parejas",720,1080,"2023","60D"],["IMG_3823","cosplay",720,845,"2024","60D"],["IMG_5675","retrato",694,1100,null,null],
+["IMG_2977","moda",709,1100,"2021","1100D"],["IMG_1473","cosplay",720,1056,"2023","60D"],["IMG_6249","retrato",720,1065,null,null],
+["IMG_2145","danza",720,1080,"2021","1100D"],["IMG_7352","retrato",720,878,null,null],["IMG_1977","cosplay",720,1080,"2023","60D"],
+["IMG_2984","moda",720,952,null,null],["IMG_2362","parejas",720,1004,"2023","60D"],["IMG_0255","retrato",720,1080,null,null],
+["IMG_3786","cosplay",720,1057,null,null],["IMG_2835","cosplay",720,1080,"2023","60D"],["IMG_0257","retrato",720,1080,null,null]
+].map(([id,cat,w,h,year,cam])=>({id,cat,w,h,year,cam}));
+
+const $=s=>document.querySelector(s);
+const wall=$("#wall"),filters=$("#filters");
+let current="todo",visible=P;
+
+function meta(p){return p.year||""}
+
+function renderFilters(){
+  const counts={todo:P.length};P.forEach(p=>counts[p.cat]=(counts[p.cat]||0)+1);
+  filters.innerHTML=[["todo","Todo"],...Object.entries(CATS)].map(([k,l])=>
+    `<button class="chip" type="button" data-k="${k}" aria-pressed="${k===current}">${l}<span>${counts[k]}</span></button>`).join("");
+}
+function renderWall(){
+  visible=current==="todo"?P:P.filter(p=>p.cat===current);
+  wall.innerHTML=visible.map((p,i)=>`<figure class="frame"><button type="button" data-i="${i}" aria-label="Ampliar ${CATS[p.cat]}, ${p.id}">
+    <img src="img/s/${p.id}.webp" width="${p.w}" height="${p.h}" loading="${i<8?"eager":"lazy"}" decoding="async" alt="${CATS[p.cat]}, ${p.id}"></button>
+    <figcaption><span>${p.id}</span><em>${CATS[p.cat]}</em></figcaption></figure>`).join("");
+  $("#count").textContent=`${P.length} fotos`;
+}
+filters.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;current=b.dataset.k;renderFilters();renderWall()});
+wall.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)open(+b.dataset.i)});
+
+// lightbox
+const lb=$("#lb"),img=$("#lb-img");let idx=0,lastFocus=null;
+function show(i){
+  idx=(i+visible.length)%visible.length;const p=visible[idx];
+  img.classList.add("loading");img.alt=`${CATS[p.cat]}, ${p.id}`;
+  img.src=`img/l/${p.id}.webp`;
+  $("#lb-n").textContent=`${String(idx+1).padStart(2,"0")} / ${String(visible.length).padStart(2,"0")}`;
+  const m=meta(p);$("#lb-cap").innerHTML=`${p.id} · <em>${CATS[p.cat]}</em>${m?" · "+m:""}`;
+  [1,-1].forEach(d=>{const n=visible[(idx+d+visible.length)%visible.length];new Image().src=`img/l/${n.id}.webp`});
+}
+img.addEventListener("load",()=>img.classList.remove("loading"));
+function open(i){lastFocus=document.activeElement;lb.hidden=false;document.body.style.overflow="hidden";show(i);$("#lb-close").focus()}
+function close(){lb.hidden=true;document.body.style.overflow="";lastFocus&&lastFocus.focus()}
+$("#lb-close").onclick=close;$("#lb-prev").onclick=()=>show(idx-1);$("#lb-next").onclick=()=>show(idx+1);
+$("#lb-stage").addEventListener("click",e=>{if(e.target.id==="lb-stage")close()});
+document.addEventListener("keydown",e=>{if(lb.hidden)return;
+  if(e.key==="Escape")close();else if(e.key==="ArrowRight")show(idx+1);else if(e.key==="ArrowLeft")show(idx-1)});
+let sx=null;const st=$("#lb-stage");
+st.addEventListener("pointerdown",e=>{sx=e.clientX});
+st.addEventListener("pointerup",e=>{if(sx==null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1))});
+
+// copiar usuario
+$("#copy").addEventListener("click",()=>{const b=$("#copy");
+  const done=()=>{b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar",1600)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents($("#handle"));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  try{navigator.clipboard.writeText("@wenas_nochesj").then(done,sel)}catch(_){sel()}});
+
+document.addEventListener("click",e=>{const b=e.target.closest("[data-see]");if(!b)return;
+  current=b.dataset.see;renderFilters();renderWall();document.getElementById("trabajo").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})});
+renderFilters();renderWall();
+</script>
+
+</body>
+</html>
